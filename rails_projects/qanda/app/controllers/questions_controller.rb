@@ -16,6 +16,7 @@ class QuestionsController < ApplicationController
       redirect_to root_path, notice: 'Success!'
     else
       flash[:alert] = "Save error!"
+      render :new
     end
   end
 
@@ -23,7 +24,8 @@ class QuestionsController < ApplicationController
   end
   
   private
-  def question_params
-    params.require(:question).permit(:name, :title, :content)
-  end
+    def question_params
+      params.require(:question).permit(:name, :title, :content)
+    end
+  
 end
