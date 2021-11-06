@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # get 'questions/new'
   # get 'questions/edit'
   
+  
   root 'questions#index'
   resources :questions do
     resources :answers
